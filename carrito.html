@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="codigo.css">
+</head>
+<body>
+    <h1>Wolkswagen</h1>
+    <div id="productos">
+        <!-- Productos se cargarán aquí con JavaScript -->
+    </div>
+    <h2>Carrito</h2>
+    <ul id="carrito">
+        <!-- Productos añadidos al carrito se mostrarán aquí -->
+    </ul>
+    <p>Total: $<span id="total">0.00</span></p>
+    <button id="finalizarCompra">Finalizar Compra</button>
+
+    <div id="ticket" style="display:none;">
+        <h2>Ticket de Compra</h2>
+        <ul id="productosTicket"></ul>
+        <p>Total: $<span id="totalTicket">0.00</span></p>
+        <button onclick="window.print()">Imprimir Ticket</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Imágenes del Local de Volkswagen - Carrusel en movimiento</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+    h1 {
+        color: #003b49;
+        margin-bottom: 30px;
+    }
+
+    /* Contenedor general para el carrusel */
+    .carousel-container {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 3px solid #003b49;
+        border-radius: 10px;
+        background: white;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Zona que se mueve */
+    .carousel-track {
+        display: flex;
+        width: calc(300px * 8); /* 8 imágenes porque las repetimos para que el loop sea continuo */
+        animation: scroll-left 20s linear infinite;
+    }
+
+    /* Estilo imágenes */
+    .carousel-track img {
+        width: 300px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border: 3px solid #003b49;
+        margin-right: 20px;
+        cursor: pointer;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .carousel-track img:hover {
+        transform: scale(1.05);
+        border-color: #005f73;
+        animation-play-state: paused; /* Pausa la animación al hacer hover */
+    }
+
+    /* Animación para mover las imágenes */
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    footer {
+        margin-top: 40px;
+        color: #666;
+    }
+</style>
+</head>
+<body>
+
+<h1>Imágenes del Local de Volkswagen</h1>
+
+<div class="carousel-container">
+    <div class="carousel-track">
+        <img src="local.jpg" alt="Showroom Volkswagen 1" />
+        <img src="local5.jpg" alt="Sede Volkswagen Wolfsburg" />
+        <img src="local3.jpg" alt="Showroom Volkswagen 2" />
+        <img src="local4.jpg" alt="Volkswagen local interior" />
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Volkswagen México</p>
+</footer>
+
+</body>
+</html>

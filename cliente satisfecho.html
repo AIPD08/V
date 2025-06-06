@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Imagen en movimiento</title>
+<style>
+  @keyframes mover {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(300px); }
+  }
+
+  .imagen-movimiento {
+    position: relative;
+    animation: mover 3s linear infinite alternate;
+  }
+</style>
+</head>
+<body>
+
+<img src="clientes1.jpg" alt="Imagen" class="imagen-movimiento" />
+<img src="clientes2.jpg" alt="Imagen" class="imagen-movimiento" />
+<img src="clientes3.jpg" alt="Imagen" class="imagen-movimiento" />
+<img src="clientes4.jpg" alt="Imagen" class="imagen-movimiento" />
+
+</body>
+</html>
